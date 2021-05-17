@@ -17,34 +17,44 @@ using std::vector;
 namespace pandemic
 {
     class Player{
+            Board _board;
             City _currCity;
             vector<City> _cards;
 
         public:
             
+            /*     |/\/\/\ CONSTRUCTOR /\/\/|    */
+
             Player(Board board, City city);
 
-            vector<City> getCards();
+            /*     |/\/\/\ GETTERS /\/\/|    */
 
-            City getCity();
+            virtual vector<City> getCards();
 
-            Player& take_card(City city);
+            virtual City getCity();
 
-            string role();
+            virtual string role();
 
             void discover_cure(Color color);
 
-            Player& drive(City city);
+            /*     |/\/\/\ SETTERS /\/\/|    */
 
-            Player& fly_direct(City city);
+            Player& take_card(City city);
 
-            Player& fly_charter(City city);
+            virtual Player& build();
 
-            Player& fly_shuttle(City city);
+            virtual Player& treat(City city);
+            
 
-            Player& build();
+            /*     |/\/\/\ TRANSPORT /\/\/|    */
 
-            Player& treat(City city);
+            virtual Player& drive(City city);
+
+            virtual Player& fly_direct(City city);
+
+            virtual Player& fly_charter(City city);
+
+            virtual Player& fly_shuttle(City city);
 
     };
 
