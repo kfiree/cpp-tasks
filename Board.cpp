@@ -3,10 +3,14 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <vector>
+#include <algorithm>
 
 using std::istringstream;
 using std::string;
 using std::ifstream;
+using std::find;
+
 namespace pandemic
 {
     Board::Board(){
@@ -35,6 +39,22 @@ namespace pandemic
         }
     }
 
+    /*     |/\/\/\ GETTERS /\/\/|    */
+
+    // int Board
+    bool Board::is_clean()
+    {
+        citiesMap::iterator itr;
+
+        for(itr = _citiesMap.begin(); itr!= _citiesMap.end(); itr++){
+            if(itr->second.infectionLvl!= 0){
+                return false;
+            }
+            return true;
+        }
+
+    }
+
     bool Board::isBuilt(City city){
         return this->_citiesMap[city].reaserchStation;
     }
@@ -44,12 +64,57 @@ namespace pandemic
         return this->cures[color];
     }
 
-    // int Board
-    bool Board::is_clean()
-    {
-        return true;
+    bool Board::adjacent(City city){ 
+        vector <City> neighbours = this->_citiesMap[city].neighbours;
+        if(find(neighbours.begin(), neighbours.end(), city) != neighbours.end()) {
+           return true;
+        }
+
+        return false;
     }
 
+    int Board::getInfectionLvl(City city){ 
+        return this->_citiesMap[city].infectionLvl;
+    }
+
+    Color Board::getColor(City city){
+        return this->_citiesMap[city].color;
+    }
+
+    Color Board::getCityColor(City city){
+        return this->_citiesMap[city].color;
+    }
+
+    /*     |/\/\/\ SETTERS /\/\/|    */
+
+    void Board::setInfectionLvl(City city, int lvl){
+        this->_citiesMap[city].infectionLvl += lvl;
+    }
+
+
+    void Board::cure(Color color){ 
+        this->cures[color] = true;
+    }
+
+    void Board::unCure(){ 
+        for(int i = 0; i<4; i++){
+            this->cures[i] = false;
+        }
+    }
+
+    void Board::build(City city){ 
+        this->_citiesMap[city].reaserchStation = true;
+    }
+
+    void Board::unBuild(){ 
+        citiesMap::iterator itr;
+
+        for(itr = _citiesMap.begin(); itr!= _citiesMap.end(); itr++){
+            itr->second.reaserchStation = false;
+        }
+    }
+
+    /*     |/\/\/\ OPERATORS OVERLOADING /\/\/|    */
 
     int & Board::operator[](City city){
         try{
@@ -64,6 +129,6 @@ namespace pandemic
 
     ostream& operator<<(ostream& out, const Board& num)
     {
-        return out;
+        return out<<""<<std::endl;
     }
 }

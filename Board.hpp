@@ -55,9 +55,11 @@ namespace pandemic{
 
             Color getColor(City city);
 
+            Color getCityColor(City city);
+            
             /*     |/\/\/\ SETTERS /\/\/|    */
 
-            int setInfectionLvl(City city, int lvl);
+            void setInfectionLvl(City city, int lvl);
             
             void cure(Color color);
 
@@ -67,7 +69,6 @@ namespace pandemic{
 
             void unBuild();
 
-            void getCityColor();
 
             /*     |/\/\/\ OPERATORS OVERLOADING /\/\/|    */
 
