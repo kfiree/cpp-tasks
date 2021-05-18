@@ -10,26 +10,37 @@
 #include "Color.hpp"
 #include "Board.hpp"
 #include <vector>
+#include <set>
+#include <map>
+
 
 using std::string;
 using std::vector;
+using std::set;
+using std::map;
+
 
 namespace pandemic
 {
+    const int colorSize = 4;
+    const int fiveCards = 5;
+
     class Player{
             Board _board;
             City _currCity;
-            vector<City> _cards;
+            set<City> _cards;
+            set<City> _cardsByColor[colorSize];
+        
 
         public:
             
             /*     |/\/\/\ CONSTRUCTOR /\/\/|    */
 
-            Player(Board board, City city);
+            Player(Board board, City city):_board(board), _currCity(city){}
 
             /*     |/\/\/\ GETTERS /\/\/|    */
 
-            virtual vector<City> getCards();
+             virtual set<City> getCards();
 
             virtual City getCity();
 
@@ -55,6 +66,14 @@ namespace pandemic
             virtual Player& fly_charter(City city);
 
             virtual Player& fly_shuttle(City city);
+
+        /*     |/\/\/\ check legality /\/\/|    */
+
+            void checkDest(City city);
+
+            void checkInCards(City city);
+
+            void eraseCard(City city);
 
     };
 

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SP_4b"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/user/Desktop/SP/SP_4b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/user/Desktop/SP/SP_4b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/user/Desktop/SP/SP_4b/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SP_4b">
+				<Option output="/home/user/Desktop/SP/SP_4b/cmake-build-debug/SP_4b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/user/Desktop/SP/SP_4b/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/user/Desktop/SP/SP_4b/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 SP_4b"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SP_4b/fast">
+				<Option output="/home/user/Desktop/SP/SP_4b/cmake-build-debug/SP_4b" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/user/Desktop/SP/SP_4b/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/user/Desktop/SP/SP_4b/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 SP_4b/fast"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/user/Desktop/SP/SP_4b/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Board.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Board.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/City.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Color.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Demo1.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Dispatcher.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Dispatcher.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/FieldDoctor.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/FieldDoctor.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/GeneSplicer.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/GeneSplicer.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Medic.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Medic.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/OperationsExpert.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/OperationsExpert.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Player.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Player.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Researcher.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Researcher.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Scientist.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Scientist.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Virologist.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/Virologist.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

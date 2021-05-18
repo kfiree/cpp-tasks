@@ -49,7 +49,7 @@ namespace pandemic{
 
             bool isCured(Color color);
 
-            bool adjacent(City city);
+            bool adjacent(City city1, City city2);
 
             int getInfectionLvl(City city);
 
@@ -59,7 +59,7 @@ namespace pandemic{
             
             /*     |/\/\/\ SETTERS /\/\/|    */
 
-            void setInfectionLvl(City city, int lvl);
+            void setInfectionLvl(City city, bool cured);
             
             void cure(Color color);
 

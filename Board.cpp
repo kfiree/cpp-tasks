@@ -64,9 +64,9 @@ namespace pandemic
         return this->cures[color];
     }
 
-    bool Board::adjacent(City city){ 
-        vector <City> neighbours = this->_citiesMap[city].neighbours;
-        if(find(neighbours.begin(), neighbours.end(), city) != neighbours.end()) {
+    bool Board::adjacent(City city1, City city2){ 
+        vector <City> neighbours = this->_citiesMap[city1].neighbours;
+        if(find(neighbours.begin(), neighbours.end(), city2) != neighbours.end()) {
            return true;
         }
 
@@ -87,10 +87,13 @@ namespace pandemic
 
     /*     |/\/\/\ SETTERS /\/\/|    */
 
-    void Board::setInfectionLvl(City city, int lvl){
-        this->_citiesMap[city].infectionLvl += lvl;
+    void Board::setInfectionLvl(City city, bool cured){
+        if(cured){
+            this->_citiesMap[city].infectionLvl = 0;
+        }else{
+            this->_citiesMap[city].infectionLvl--;
+        }
     }
-
 
     void Board::cure(Color color){ 
         this->cures[color] = true;

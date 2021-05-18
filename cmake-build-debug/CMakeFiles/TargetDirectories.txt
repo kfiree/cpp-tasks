@@ -1,0 +1,3 @@
+/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir
