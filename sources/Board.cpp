@@ -16,7 +16,9 @@ namespace pandemic
 {
     Board::Board(){
         readCountries();
-        this->cures = {false};
+        for(int i = 0; i<colorSize; i++){
+            this->_cures.insert(std::make_pair(Color(i), false));
+        }
     }
 
     void Board::readCountries(){
@@ -53,7 +55,7 @@ namespace pandemic
 
     bool Board::isCured(Color color)
     {
-        return cures.at(color);
+        return _cures.at(color);
     }
 
     bool Board::adjacent(City city1, City city2){ 
@@ -102,12 +104,13 @@ namespace pandemic
     }
 
     void Board::cure(Color color){ 
-        this->cures.at(color) = true;
+        this->_cures.at(color) = true;
     }
 
     void Board::remove_cures() {
-        for(bool & cure : this->cures){
-            cure = false;
+        
+        for(int i = 0; i< colorSize; i++){
+            _cures[Color(i)]=false;
         }
     }
 

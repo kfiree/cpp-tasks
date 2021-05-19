@@ -36,7 +36,8 @@ namespace pandemic{
         private:
             citiesMap _citiesMap;
 
-            std::array<bool, colorSize> cures;
+            map<Color, bool> _cures;
+            // std::array<bool, colorSize> cures;
 
             void readCountries();
 
