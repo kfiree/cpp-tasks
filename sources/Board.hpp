@@ -10,6 +10,7 @@
 #include <map>
 #include <string>
 #include <vector>
+#include <array>
 
 using std::ostream;
 using std::string;
@@ -28,14 +29,16 @@ typedef map<City, cityInfo> citiesMap;
 
 namespace pandemic{
 
+    const int colorSize = 4;
+
     class Board
     {
         private:
             citiesMap _citiesMap;
 
-            void readCountries();
+            std::array<bool, colorSize> cures;
 
-            bool cures[4];
+            void readCountries();
 
         public:
 
@@ -63,7 +66,7 @@ namespace pandemic{
             
             void cure(Color color);
 
-            void unCure();
+            void remove_cures();
 
             void build(City city);
 

@@ -14,8 +14,14 @@ namespace pandemic
 {
     class Virologist : public Player
     {
+        private:
+            const string _role = "Virologist";
         public:
-            Virologist(Board board, City city);
+            Virologist(Board& board, City city):Player(board, city){}
+
+            string role();
+
+            Player& treat(City city);
     };
 }
 

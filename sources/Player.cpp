@@ -3,22 +3,13 @@
 //
 
 #include "Player.hpp"
-#include <stdio.h>
 #include <algorithm>
-#include <vector>
 
 using std::invalid_argument;
 using namespace pandemic;
 
 namespace pandemic
 {
-    /*     |/\/\/\ CONSTRUCTOR /\/\/|    */
-
-    // Player::Player(Board board, City city){
-    //     this->_board = board;
-    //     this->_currCity = city;
-    // }
-
     /*     |/\/\/\ GETTERS /\/\/|    */
 
 
@@ -34,14 +25,14 @@ namespace pandemic
 
     Player& Player::take_card(City city){
         this->_cards.insert(city);
-        this->_cardsByColor[_board.getColor(city)].insert(city);
+        this->_cardsByColor.at(_board.getColor(city)).insert(city);
         return *this;
     }
 
-    void Player::discover_cure(Color color){
+    Player& Player::discover_cure(Color color){
         //check if city is cured already
         if(_board.isCured(color)){
-            return;
+            return *this;
         }
 
         // check if research station is built
@@ -50,13 +41,13 @@ namespace pandemic
         }
 
         // check if player have 5 cards with city's color
-        set<City> coloredCities = this->_cardsByColor[color];
+        set<City> coloredCities = this->_cardsByColor.at(color);
         if(coloredCities.size() < fiveCards){
             throw invalid_argument("Error! can't cure because player dont have enough cards with city's color");
         }
 
         // delete five cards in order to cure
-        set<City>::iterator itr = coloredCities.begin();
+        auto itr = coloredCities.begin();
         for(int i = 0; i< fiveCards; i++){
             eraseCard(*itr);
             itr++;
@@ -64,6 +55,14 @@ namespace pandemic
 
         // mark color as cure
         this->_board.cure(color);
+
+        return *this;
+    }
+
+    void Player::remove_cards() {
+        for(City city: this->_cards){
+            eraseCard(city);
+        }
     }
 
     /*     |/\/\/\ TRANSPORTATION /\/\/|    */
@@ -71,7 +70,7 @@ namespace pandemic
     Player& Player::drive(City city){
 
         checkDest(city);
-        
+
         if(!this->_board.adjacent(this->_currCity, city)){
             throw std::invalid_argument("ERROR! cant do 'drive' because destination city and current city are not adjacent");
         }
@@ -102,6 +101,8 @@ namespace pandemic
         eraseCard(this->_currCity);
 
         this->_currCity = city;
+
+        return *this;
     }
 
     Player& Player::fly_shuttle(City city){
@@ -174,7 +175,7 @@ namespace pandemic
     }
 
     void Player::eraseCard(City city){
-        this->_cardsByColor[_board.getCityColor(city)].erase(city);
+        this->_cardsByColor.at(_board.getCityColor(city)).erase(city);
         this->_cards.erase(city);
     }
 

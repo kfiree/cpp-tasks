@@ -76,18 +76,18 @@ include CMakeFiles/SP_4b.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SP_4b.dir/flags.make
 
-CMakeFiles/SP_4b.dir/Board.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Board.cpp.o: ../Board.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SP_4b.dir/Board.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Board.cpp.o -c /home/user/Desktop/SP/SP_4b/Board.cpp
+CMakeFiles/SP_4b.dir/sources/Board.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Board.cpp.o: ../sources/Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SP_4b.dir/sources/Board.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Board.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Board.cpp
 
-CMakeFiles/SP_4b.dir/Board.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Board.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Board.cpp > CMakeFiles/SP_4b.dir/Board.cpp.i
+CMakeFiles/SP_4b.dir/sources/Board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Board.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Board.cpp > CMakeFiles/SP_4b.dir/sources/Board.cpp.i
 
-CMakeFiles/SP_4b.dir/Board.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Board.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Board.cpp -o CMakeFiles/SP_4b.dir/Board.cpp.s
+CMakeFiles/SP_4b.dir/sources/Board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Board.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Board.cpp -o CMakeFiles/SP_4b.dir/sources/Board.cpp.s
 
 CMakeFiles/SP_4b.dir/Demo1.cpp.o: CMakeFiles/SP_4b.dir/flags.make
 CMakeFiles/SP_4b.dir/Demo1.cpp.o: ../Demo1.cpp
@@ -102,151 +102,151 @@ CMakeFiles/SP_4b.dir/Demo1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Demo1.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Demo1.cpp -o CMakeFiles/SP_4b.dir/Demo1.cpp.s
 
-CMakeFiles/SP_4b.dir/Dispatcher.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Dispatcher.cpp.o: ../Dispatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SP_4b.dir/Dispatcher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Dispatcher.cpp.o -c /home/user/Desktop/SP/SP_4b/Dispatcher.cpp
+CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o: ../sources/Dispatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Dispatcher.cpp
 
-CMakeFiles/SP_4b.dir/Dispatcher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Dispatcher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Dispatcher.cpp > CMakeFiles/SP_4b.dir/Dispatcher.cpp.i
+CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Dispatcher.cpp > CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.i
 
-CMakeFiles/SP_4b.dir/Dispatcher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Dispatcher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Dispatcher.cpp -o CMakeFiles/SP_4b.dir/Dispatcher.cpp.s
+CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Dispatcher.cpp -o CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.s
 
-CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o: ../FieldDoctor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o -c /home/user/Desktop/SP/SP_4b/FieldDoctor.cpp
+CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o: ../sources/FieldDoctor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/FieldDoctor.cpp
 
-CMakeFiles/SP_4b.dir/FieldDoctor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/FieldDoctor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/FieldDoctor.cpp > CMakeFiles/SP_4b.dir/FieldDoctor.cpp.i
+CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/FieldDoctor.cpp > CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.i
 
-CMakeFiles/SP_4b.dir/FieldDoctor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/FieldDoctor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/FieldDoctor.cpp -o CMakeFiles/SP_4b.dir/FieldDoctor.cpp.s
+CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/FieldDoctor.cpp -o CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.s
 
-CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o: ../GeneSplicer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o -c /home/user/Desktop/SP/SP_4b/GeneSplicer.cpp
+CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o: ../sources/GeneSplicer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/GeneSplicer.cpp
 
-CMakeFiles/SP_4b.dir/GeneSplicer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/GeneSplicer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/GeneSplicer.cpp > CMakeFiles/SP_4b.dir/GeneSplicer.cpp.i
+CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/GeneSplicer.cpp > CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.i
 
-CMakeFiles/SP_4b.dir/GeneSplicer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/GeneSplicer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/GeneSplicer.cpp -o CMakeFiles/SP_4b.dir/GeneSplicer.cpp.s
+CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/GeneSplicer.cpp -o CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.s
 
-CMakeFiles/SP_4b.dir/Medic.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Medic.cpp.o: ../Medic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SP_4b.dir/Medic.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Medic.cpp.o -c /home/user/Desktop/SP/SP_4b/Medic.cpp
+CMakeFiles/SP_4b.dir/sources/Medic.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Medic.cpp.o: ../sources/Medic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SP_4b.dir/sources/Medic.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Medic.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Medic.cpp
 
-CMakeFiles/SP_4b.dir/Medic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Medic.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Medic.cpp > CMakeFiles/SP_4b.dir/Medic.cpp.i
+CMakeFiles/SP_4b.dir/sources/Medic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Medic.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Medic.cpp > CMakeFiles/SP_4b.dir/sources/Medic.cpp.i
 
-CMakeFiles/SP_4b.dir/Medic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Medic.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Medic.cpp -o CMakeFiles/SP_4b.dir/Medic.cpp.s
+CMakeFiles/SP_4b.dir/sources/Medic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Medic.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Medic.cpp -o CMakeFiles/SP_4b.dir/sources/Medic.cpp.s
 
-CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o: ../OperationsExpert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o -c /home/user/Desktop/SP/SP_4b/OperationsExpert.cpp
+CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o: ../sources/OperationsExpert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/OperationsExpert.cpp
 
-CMakeFiles/SP_4b.dir/OperationsExpert.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/OperationsExpert.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/OperationsExpert.cpp > CMakeFiles/SP_4b.dir/OperationsExpert.cpp.i
+CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/OperationsExpert.cpp > CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.i
 
-CMakeFiles/SP_4b.dir/OperationsExpert.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/OperationsExpert.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/OperationsExpert.cpp -o CMakeFiles/SP_4b.dir/OperationsExpert.cpp.s
+CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/OperationsExpert.cpp -o CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.s
 
-CMakeFiles/SP_4b.dir/Player.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Player.cpp.o: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SP_4b.dir/Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Player.cpp.o -c /home/user/Desktop/SP/SP_4b/Player.cpp
+CMakeFiles/SP_4b.dir/sources/Player.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Player.cpp.o: ../sources/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SP_4b.dir/sources/Player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Player.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Player.cpp
 
-CMakeFiles/SP_4b.dir/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Player.cpp > CMakeFiles/SP_4b.dir/Player.cpp.i
+CMakeFiles/SP_4b.dir/sources/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Player.cpp > CMakeFiles/SP_4b.dir/sources/Player.cpp.i
 
-CMakeFiles/SP_4b.dir/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Player.cpp -o CMakeFiles/SP_4b.dir/Player.cpp.s
+CMakeFiles/SP_4b.dir/sources/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Player.cpp -o CMakeFiles/SP_4b.dir/sources/Player.cpp.s
 
-CMakeFiles/SP_4b.dir/Researcher.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Researcher.cpp.o: ../Researcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SP_4b.dir/Researcher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Researcher.cpp.o -c /home/user/Desktop/SP/SP_4b/Researcher.cpp
+CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o: ../sources/Researcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Researcher.cpp
 
-CMakeFiles/SP_4b.dir/Researcher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Researcher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Researcher.cpp > CMakeFiles/SP_4b.dir/Researcher.cpp.i
+CMakeFiles/SP_4b.dir/sources/Researcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Researcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Researcher.cpp > CMakeFiles/SP_4b.dir/sources/Researcher.cpp.i
 
-CMakeFiles/SP_4b.dir/Researcher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Researcher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Researcher.cpp -o CMakeFiles/SP_4b.dir/Researcher.cpp.s
+CMakeFiles/SP_4b.dir/sources/Researcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Researcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Researcher.cpp -o CMakeFiles/SP_4b.dir/sources/Researcher.cpp.s
 
-CMakeFiles/SP_4b.dir/Scientist.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Scientist.cpp.o: ../Scientist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SP_4b.dir/Scientist.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Scientist.cpp.o -c /home/user/Desktop/SP/SP_4b/Scientist.cpp
+CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o: ../sources/Scientist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Scientist.cpp
 
-CMakeFiles/SP_4b.dir/Scientist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Scientist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Scientist.cpp > CMakeFiles/SP_4b.dir/Scientist.cpp.i
+CMakeFiles/SP_4b.dir/sources/Scientist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Scientist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Scientist.cpp > CMakeFiles/SP_4b.dir/sources/Scientist.cpp.i
 
-CMakeFiles/SP_4b.dir/Scientist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Scientist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Scientist.cpp -o CMakeFiles/SP_4b.dir/Scientist.cpp.s
+CMakeFiles/SP_4b.dir/sources/Scientist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Scientist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Scientist.cpp -o CMakeFiles/SP_4b.dir/sources/Scientist.cpp.s
 
-CMakeFiles/SP_4b.dir/Virologist.cpp.o: CMakeFiles/SP_4b.dir/flags.make
-CMakeFiles/SP_4b.dir/Virologist.cpp.o: ../Virologist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SP_4b.dir/Virologist.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/Virologist.cpp.o -c /home/user/Desktop/SP/SP_4b/Virologist.cpp
+CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o: CMakeFiles/SP_4b.dir/flags.make
+CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o: ../sources/Virologist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o -c /home/user/Desktop/SP/SP_4b/sources/Virologist.cpp
 
-CMakeFiles/SP_4b.dir/Virologist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/Virologist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/Virologist.cpp > CMakeFiles/SP_4b.dir/Virologist.cpp.i
+CMakeFiles/SP_4b.dir/sources/Virologist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SP_4b.dir/sources/Virologist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/SP/SP_4b/sources/Virologist.cpp > CMakeFiles/SP_4b.dir/sources/Virologist.cpp.i
 
-CMakeFiles/SP_4b.dir/Virologist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/Virologist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/Virologist.cpp -o CMakeFiles/SP_4b.dir/Virologist.cpp.s
+CMakeFiles/SP_4b.dir/sources/Virologist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SP_4b.dir/sources/Virologist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/SP/SP_4b/sources/Virologist.cpp -o CMakeFiles/SP_4b.dir/sources/Virologist.cpp.s
 
 # Object files for target SP_4b
 SP_4b_OBJECTS = \
-"CMakeFiles/SP_4b.dir/Board.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/Board.cpp.o" \
 "CMakeFiles/SP_4b.dir/Demo1.cpp.o" \
-"CMakeFiles/SP_4b.dir/Dispatcher.cpp.o" \
-"CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o" \
-"CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o" \
-"CMakeFiles/SP_4b.dir/Medic.cpp.o" \
-"CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o" \
-"CMakeFiles/SP_4b.dir/Player.cpp.o" \
-"CMakeFiles/SP_4b.dir/Researcher.cpp.o" \
-"CMakeFiles/SP_4b.dir/Scientist.cpp.o" \
-"CMakeFiles/SP_4b.dir/Virologist.cpp.o"
+"CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/Medic.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/Player.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o" \
+"CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o"
 
 # External object files for target SP_4b
 SP_4b_EXTERNAL_OBJECTS =
 
-SP_4b: CMakeFiles/SP_4b.dir/Board.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Board.cpp.o
 SP_4b: CMakeFiles/SP_4b.dir/Demo1.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/Dispatcher.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/Medic.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/Player.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/Researcher.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/Scientist.cpp.o
-SP_4b: CMakeFiles/SP_4b.dir/Virologist.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Medic.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Player.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o
+SP_4b: CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o
 SP_4b: CMakeFiles/SP_4b.dir/build.make
 SP_4b: CMakeFiles/SP_4b.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable SP_4b"

@@ -1,14 +1,9 @@
-//
-// Created by user on 02/05/2021.
-//
-
 #pragma once
+#include "Color.hpp"
+#include "City.hpp"
+#include "Board.hpp"
 #include <iostream>
 #include <string>
-
-#include "City.hpp"
-#include "Color.hpp"
-#include "Board.hpp"
 #include <vector>
 #include <set>
 #include <map>
@@ -22,21 +17,21 @@ using std::map;
 
 namespace pandemic
 {
-    const int colorSize = 4;
     const int fiveCards = 5;
 
     class Player{
-            Board _board;
+
+        protected:
+            Board& _board;
             City _currCity;
             set<City> _cards;
-            set<City> _cardsByColor[colorSize];
-        
+            std::array<set<City>,colorSize> _cardsByColor;
 
         public:
             
             /*     |/\/\/\ CONSTRUCTOR /\/\/|    */
 
-            Player(Board board, City city):_board(board), _currCity(city){}
+            Player(Board& board, City city):_board(board), _currCity(city){}
 
             /*     |/\/\/\ GETTERS /\/\/|    */
 
@@ -44,17 +39,19 @@ namespace pandemic
 
             virtual City getCity();
 
-            virtual string role();
+            virtual string role() = 0;
 
-            void discover_cure(Color color);
+            Player& discover_cure(Color color);
 
-            /*     |/\/\/\ SETTERS /\/\/|    */
+            /*     |/\/\/\ OPERATIONS /\/\/|    */
 
             Player& take_card(City city);
 
             virtual Player& build();
 
             virtual Player& treat(City city);
+
+            void remove_cards();
             
 
             /*     |/\/\/\ TRANSPORT /\/\/|    */

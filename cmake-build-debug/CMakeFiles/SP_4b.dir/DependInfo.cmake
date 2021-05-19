@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/user/Desktop/SP/SP_4b/Board.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Board.cpp.o"
   "/home/user/Desktop/SP/SP_4b/Demo1.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Demo1.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/Dispatcher.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Dispatcher.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/FieldDoctor.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/FieldDoctor.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/GeneSplicer.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/GeneSplicer.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/Medic.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Medic.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/OperationsExpert.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/OperationsExpert.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/Player.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Player.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/Researcher.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Researcher.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/Scientist.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Scientist.cpp.o"
-  "/home/user/Desktop/SP/SP_4b/Virologist.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/Virologist.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Board.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Board.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Dispatcher.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Dispatcher.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/FieldDoctor.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/FieldDoctor.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/GeneSplicer.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/GeneSplicer.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Medic.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Medic.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/OperationsExpert.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/OperationsExpert.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Player.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Player.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Researcher.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Researcher.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Scientist.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Scientist.cpp.o"
+  "/home/user/Desktop/SP/SP_4b/sources/Virologist.cpp" "/home/user/Desktop/SP/SP_4b/cmake-build-debug/CMakeFiles/SP_4b.dir/sources/Virologist.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

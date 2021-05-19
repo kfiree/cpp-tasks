@@ -1,155 +1,218 @@
 /**
  * Demo program for Pandemic exercise - OperationsExpert role
- * 
+ *
  * Author: Erel Segal-Halevi
  * Since : 2021-04
  */
 
-#include "Board.hpp"
-#include "City.hpp"
-#include "Color.hpp"
+#include "sources/Board.hpp"
+#include "sources/City.hpp"
+#include "sources/Color.hpp"
+/* include main classes */
+#include "sources/Board.hpp"
+#include "sources/City.hpp"
+#include "sources/Color.hpp"
+#include "sources/Player.hpp"
+/* include special skills players */
+#include "sources/Researcher.hpp"
+#include "sources/Scientist.hpp"
+#include "sources/FieldDoctor.hpp"
+#include "sources/GeneSplicer.hpp"
+#include "sources/OperationsExpert.hpp"
+#include "sources/Dispatcher.hpp"
+#include "sources/Medic.hpp"
+#include "sources/Virologist.hpp"
 
-#include "OperationsExpert.hpp"
+#include "sources/OperationsExpert.hpp"
 
 using namespace pandemic;
 
 #include <iostream>
 #include <stdexcept>
+
 using namespace std;
+const map<City, Color> city_color {
+        { City::Algiers, Color::Black },{ City::Atlanta, Color::Blue },{ City::Baghdad, Color::Black },{ City::Bangkok, Color::Red },
+        { City::Beijing, Color::Red },{ City::Bogota, Color::Yellow },{ City::BuenosAires, Color::Yellow },{ City::Cairo, Color::Black },
+        { City::Chennai, Color::Black },{ City::Chicago, Color::Blue },{ City::Delhi, Color::Black },{ City::Essen, Color::Blue },
+        { City::HoChiMinhCity, Color::Red },{ City::HongKong, Color::Red },{ City::Istanbul, Color::Black },{ City::Jakarta, Color::Red },
+        { City::Johannesburg, Color::Yellow },{ City::Karachi, Color::Black },{ City::Khartoum, Color::Yellow },{ City::Kinshasa, Color::Yellow },
+        { City::Kolkata, Color::Black },{ City::Lagos, Color::Yellow },{ City::Lima, Color::Yellow },{ City::London, Color::Blue },
+        { City::LosAngeles, Color::Yellow },{ City::Madrid, Color::Blue },{ City::Manila, Color::Red },{ City::MexicoCity, Color::Yellow },
+        { City::Miami, Color::Yellow },{ City::Milan, Color::Blue },{ City::Montreal, Color::Blue },{ City::Moscow, Color::Black },
+        { City::Mumbai, Color::Black },{ City::NewYork, Color::Blue },{ City::Osaka, Color::Red },{ City::Paris, Color::Blue },
+        { City::Riyadh, Color::Black },{ City::SanFrancisco, Color::Blue },{ City::Santiago, Color::Yellow },{ City::SaoPaulo, Color::Yellow },
+        { City::Seoul, Color::Red },{ City::Shanghai, Color::Red },{ City::StPetersburg, Color::Blue },{ City::Sydney, Color::Red },
+        { City::Taipei, Color::Red },{ City::Tehran, Color::Black },{ City::Tokyo, Color::Red },{ City::Washington, Color::Blue }
+};
+const map<City, vector<City>> cities {
+        { City::Algiers, {City::Madrid, City::Paris, City::Istanbul, City::Cairo } },
+        { City::Atlanta, {City::Chicago, City::Miami, City::Washington } },
+        { City::Baghdad, {City::Tehran, City::Istanbul, City::Cairo, City::Riyadh, City::Karachi } },
+        { City::Bangkok, {City::Kolkata, City::Chennai, City::Jakarta, City::HoChiMinhCity, City::HongKong } },
+        { City::Beijing, {City::Shanghai, City::Seoul } },
+        { City::Bogota, {City::MexicoCity, City::Lima, City::Miami, City::SaoPaulo, City::BuenosAires } },
+        { City::BuenosAires, {City::Bogota, City::SaoPaulo } },
+        { City::Cairo, {City::Algiers, City::Istanbul, City::Baghdad, City::Khartoum, City::Riyadh } },
+        { City::Chennai, {City::Mumbai, City::Delhi, City::Kolkata, City::Bangkok, City::Jakarta } },
+        { City::Chicago, {City::SanFrancisco, City::LosAngeles, City::MexicoCity, City::Atlanta, City::Montreal } },
+        { City::Delhi, {City::Tehran, City::Karachi, City::Mumbai, City::Chennai, City::Kolkata } },
+        { City::Essen, {City::London, City::Paris, City::Milan, City::StPetersburg } },
+        { City::HoChiMinhCity, {City::Jakarta, City::Bangkok, City::HongKong, City::Manila } },
+        { City::HongKong, {City::Bangkok, City::Kolkata, City::HoChiMinhCity, City::Shanghai, City::Manila, City::Taipei } },
+        { City::Istanbul, {City::Milan, City::Algiers, City::StPetersburg, City::Cairo, City::Baghdad, City::Moscow } },
+        { City::Jakarta, {City::Chennai, City::Bangkok, City::HoChiMinhCity, City::Sydney } },
+        { City::Johannesburg, {City::Kinshasa, City::Khartoum } },
+        { City::Karachi, {City::Tehran, City::Baghdad, City::Riyadh, City::Mumbai, City::Delhi } },
+        { City::Khartoum, {City::Cairo, City::Lagos, City::Kinshasa, City::Johannesburg } },
+        { City::Kinshasa, {City::Lagos, City::Khartoum, City::Johannesburg } },
+        { City::Kolkata, {City::Delhi, City::Chennai, City::Bangkok, City::HongKong } },
+        { City::Lagos, {City::SaoPaulo, City::Khartoum, City::Kinshasa } },
+        { City::Lima, {City::MexicoCity, City::Bogota, City::Santiago } },
+        { City::London, {City::NewYork, City::Madrid, City::Essen, City::Paris } },
+        { City::LosAngeles, {City::SanFrancisco, City::Chicago, City::MexicoCity, City::Sydney } },
+        { City::Madrid, {City::London, City::NewYork, City::Paris, City::SaoPaulo, City::Algiers } },
+        { City::Manila, {City::Taipei, City::SanFrancisco, City::HoChiMinhCity, City::Sydney } },
+        { City::MexicoCity, {City::LosAngeles, City::Chicago, City::Miami, City::Lima, City::Bogota } },
+        { City::Miami, {City::Atlanta, City::MexicoCity, City::Washington, City::Bogota } },
+        { City::Milan, {City::Essen, City::Paris, City::Istanbul } },
+        { City::Montreal, {City::Chicago, City::Washington, City::NewYork } },
+        { City::Moscow, {City::StPetersburg, City::Istanbul, City::Tehran } },
+        { City::Mumbai, {City::Karachi, City::Delhi, City::Chennai } },
+        { City::NewYork, {City::Montreal, City::Washington, City::London, City::Madrid } },
+        { City::Osaka, {City::Taipei, City::Tokyo } },
+        { City::Paris, {City::Algiers, City::Essen, City::Madrid, City::Milan, City::London } },
+        { City::Riyadh, {City::Baghdad, City::Cairo, City::Karachi } },
+        { City::SanFrancisco, {City::LosAngeles, City::Chicago, City::Tokyo, City::Manila } },
+        { City::Santiago, {City::Lima } },
+        { City::SaoPaulo, {City::Bogota, City::BuenosAires, City::Lagos, City::Madrid } },
+        { City::Seoul, {City::Beijing, City::Shanghai, City::Tokyo } },
+        { City::Shanghai, {City::Beijing, City::HongKong, City::Taipei, City::Seoul, City::Tokyo } },
+        { City::StPetersburg, {City::Essen, City::Istanbul, City::Moscow } },
+        { City::Sydney, {City::Jakarta, City::Manila, City::LosAngeles } },
+        { City::Taipei, {City::Shanghai, City::HongKong, City::Osaka, City::Manila } },
+        { City::Tehran, {City::Baghdad, City::Moscow, City::Karachi, City::Delhi } },
+        { City::Tokyo, {City::Seoul, City::Shanghai, City::Osaka, City::SanFrancisco } },
+        { City::Washington, {City::Atlanta, City::NewYork, City::Montreal, City::Miami } }
+};
 
-int main() {
-	Board board;  // Initialize an empty board (with 0 disease cubes in any city).
-	board[City::Kinshasa] = 3;      // put 3 yellow disease cubes in Kinshasa.
-	board[City::Kinshasa] = 2;      // change number of disease cubes in Kinshasa to 2.
-	board[City::MexicoCity] = 3;    // put 3 yellow disease cubes in MexicoCity
-	board[City::HoChiMinhCity] = 1; // put 1 red disease cube in HoChiMinhCity
-	board[City::Chicago] = 1;       // put 1 blue disease cube in Chicago
-
-	OperationsExpert player {board, City::Atlanta};  // initialize an "operations expert" player on the given board, in Atlanta.
-	player.take_card(City::Johannesburg)
-	 .take_card(City::Khartoum)
-	 .take_card(City::SaoPaulo)
-	 .take_card(City::BuenosAires)
-	 .take_card(City::HoChiMinhCity);
-
-
-	/* build action */
-
-	player.build();  // legal action: you build a research station in Atlanta.
-		// NOTE: you do not have the Atlanta card, so for other roles this would throw an exception.
-		//       But for the OperationsExpert it is legal, since he may build a research station without a card.
-
-
-	/* drive action */
-
-	player.drive(City::Washington);  // legal action: you drive from Atlanta to a connected city.
-	try {
-		player.drive(City::Madrid);  // illegal action: Madrid is not connected to Washington.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-
-	/* fly_direct action */
-
-	player.fly_direct(City::Johannesburg);  // legal action: you discard the Johannesburg card and fly to Johannesburg.
-	try {
-		player.fly_direct(City::Taipei);  // illegal action: you do not have the card of Taipei.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-
-	/* treat action */
-
-	player.drive(City::Kinshasa);    // legal action: you move from Johannesburg to a connected city.
-	cout << board[City::Kinshasa] << endl; // 2
-	player.treat(City::Kinshasa);    // legal action: you remove 1 disease cube from current city (1 cube remains).
-	cout << board[City::Kinshasa] << endl; // 1
-	player.treat(City::Kinshasa);    // legal action: you remove 1 disease cube from current city (0 cubes remain).
-	cout << board[City::Kinshasa] << endl; // 0
-	try {
-		player.treat(City::Kinshasa);  // illegal action: no more cubes remain in Kinshasa.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-	try {
-		player.treat(City::Washington);  // illegal action: you are not in Washington.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-
-	/* fly_charter action */
-
-	player.drive(City::Khartoum)
-	 .fly_charter(City::Sydney);  // legal action: you discard the Khartoum card and fly to Sydney.
-
-	try {
-		player.fly_charter(City::Seoul);  // illegal action: you do not have the Sydney card (the card of the city you are in).
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-
-	/* build action */
-
-	player.drive(City::LosAngeles);  // legal action: note that LosAngeles is connected to Sydney.
-	player.build();     // legal action: build a research station in LosAngeles.
-		// NOTE: you do not have the LosAngeles card, so for other roles this would throw an exception.
-		//       But for the OperationsExpert it is legal, since he may build a research station without a card.
-		
-
-
-	/* fly_shuttle action */
-
-	player.fly_shuttle(City::Atlanta); // legal action: you fly from one research station to another. 
-	player.fly_shuttle(City::LosAngeles); // legal action: you fly from one research station to another.
-	try {
-		player.fly_shuttle(City::Chicago); // illegal action: there is no research station in Chicago.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-
-	/* discover_cure action */
-
-	try {
-		player.discover_cure(Color::Yellow); // illegal action: you only have 2 yellow cards remaining.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-	player.take_card(City::Miami)
-	 .take_card(City::Bogota)
-	 .take_card(City::Lima);
-
-	player.discover_cure(Color::Yellow); // legal action: you discard 5 yellow cards and discover a yellow cure.
-	try {
-		player.fly_direct(City::Miami); // illegal action: you discarded the Miami card to discover a cure, so you cannot use this card.
-	} catch (const exception& ex) {
-	 	cout << "   caught exception: " << ex.what() << endl;  // prints a meaningful error message.
-	}
-
-	/* treat action after discovering a cure */
-
-	player.drive(City::MexicoCity); 
-	cout << board[City::MexicoCity] << endl; // 3
-	player.treat(City::MexicoCity);   // you now remove ALL disease cubes from MexicoCity, since there is a yelllow cure.
-	cout << board[City::MexicoCity] << endl; // 0
-
-
-	/* clean the board */
-
-	cout << board << endl;  // print the board in any reasonable format.
-	cout << board.is_clean() << endl;  // print "0" - the board is not clean.
-
-	player.drive(City::Chicago)
-	 .treat(City::Chicago)             // remove one disease cube - there is no blue cure yet.
-     .fly_direct(City::HoChiMinhCity)
-	 .treat(City::HoChiMinhCity);      // remove one disease cube - there is no red cure yet.
-
-	cout << board << endl;  // prints the board in any reasonable format.
-	cout << board.is_clean() << endl;  // prints "1" - the board is clean - congratulations!!! You treated all diseases!!!
+City random_city() {
+    size_t t = (size_t)rand() % 47;
+    int i = 0;
+    for(const auto& city: cities) {
+        if(i == t) {
+            return city.first;
+        }
+        i++;
+    }
+    return City::Algiers;
+}
+/* פונקציית עזר שמגרילה עיר כלשהי */
+City random_city_different_than(City c) {
+    City r = random_city();
+    while((r = random_city()) == c){}
+    return (City)r;
+}
+Color get_color(City c) {
+    return city_color.at(c);
 }
 
+/* פונקציית עזר שמגרילה עיר  */
+City random_city_colored(Color c) {
+    while(true) {
+        City r = random_city();
+        if(city_color.at(r) == c) {
+            return r;
+        }
+    }
+    return City::Algiers;
+}
+
+/* פונקציית עזר המגרילה מספר מסוים של ערים בצבע נתון  */
+set<City> pick_N_cities_colored(int N, Color c) {
+    set<City> ans;
+    while(ans.size() < N) {
+        ans.insert(random_city_colored(c));
+    }
+    return ans;
+}
+const vector<City> all_cities {
+        City::Algiers,City::Atlanta,City::Baghdad,City::Bangkok,City::Beijing,City::Bogota,City::BuenosAires,City::Cairo,City::Chennai,
+        City::Chicago,City::Delhi,City::Essen,City::HoChiMinhCity,City::HongKong,City::Istanbul,City::Jakarta,City::Johannesburg,
+        City::Karachi,City::Khartoum,City::Kinshasa,City::Kolkata,City::Lagos,City::Lima,City::London,City::LosAngeles,
+        City::Madrid,City::Manila,City::MexicoCity,City::Miami,City::Milan,City::Montreal,City::Moscow,City::Mumbai,City::NewYork,
+        City::Osaka,City::Paris,City::Riyadh,City::SanFrancisco,City::Santiago,City::SaoPaulo,City::Seoul,City::Shanghai,City::StPetersburg,
+        City::Sydney,City::Taipei,City::Tehran,City::Tokyo,City::Washington
+};
+
+bool is_connected(City c1, City c2) {
+    for(const auto& c: cities.at(c1)) {
+        if(c == c2) return true;
+    }
+    return false;
+}
+City random_connected_city(City c) {
+    size_t adjes = (size_t)rand() % (size_t)cities.at(c).size();
+    return cities.at(c).at(adjes);
+}
+
+int iin = 0;
+int main() {
+    Board board;
+    City city = random_city();
+    OperationsExpert operationsExpert{board, city};
+    Dispatcher dispatcher{board, city};
+    Scientist scientist{board, city, 4};
+    Researcher researcher{board, city};
+    Medic medic{board, city};
+    Virologist virologist{board, city};
+    GeneSplicer geneSplicer{board, city};
+    FieldDoctor fieldDoctor{board, city};
+    Player *players[] = {&operationsExpert,
+                         &dispatcher,
+                         &scientist,
+                         &researcher,
+                         &medic,
+                         &virologist,
+                         &geneSplicer,
+                         &fieldDoctor};
+
+    /* מעבר אקראי בין ערים מחוברות ע"י נסיעה רגילה */
+    for(int i = 0; i < 10; i++) {
+        City c = random_city();
+        /* אם העיר הבאה מחוברת לעיר הנוכחית - ניתן לבצע נסיעה רגילה */
+        for(int i = 0; i < 10; i++) {
+            Board b;
+            City city = random_city();
+            FieldDoctor player{b, city};
+            if(iin == 200){
+                cout <<"";
+            }
+            bool a = false;
+            try {
+                player.treat(city); //no disease cubes
+            }
+            catch (...) {
+                a=true;
+            }
+            if(!a) {
+                cout << "fuck";
+            }
+
+            /* מעבר רנדומלי בין הערים השונות בעזרת נסיעה רגילה */
+            for(int j = 0; j < 20; j++) {
+                city = random_connected_city(city);
+                iin++;
+                b[city] = 10;
+                if(b[city] != 10){
+                    cout<<"10 10 10 10 10 10 - j - "<< j<<" iin - "<< iin<< ", city-"<< city<< endl;
+                }
+                player.treat(city);
+                if(b[city] != 9){
+                    cout<<"9 9 9 9 9 9 9  - j - "<< j<<" iin - "<< iin<< ", city-"<< city<< endl;
+                }
+                player.drive(city);
+            }
+        }
+    }
+}

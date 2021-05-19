@@ -84,73 +84,73 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Board.cpp">
-			<Option target="SP_4b"/>
-		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Board.hpp">
-			<Option target="SP_4b"/>
-		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/City.hpp">
-			<Option target="SP_4b"/>
-		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Color.hpp">
-			<Option target="SP_4b"/>
-		</Unit>
 		<Unit filename="/home/user/Desktop/SP/SP_4b/Demo1.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Dispatcher.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Board.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Dispatcher.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Board.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/FieldDoctor.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/City.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/FieldDoctor.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Color.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/GeneSplicer.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Dispatcher.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/GeneSplicer.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Dispatcher.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Medic.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/FieldDoctor.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Medic.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/FieldDoctor.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/OperationsExpert.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/GeneSplicer.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/OperationsExpert.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/GeneSplicer.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Player.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Medic.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Player.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Medic.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Researcher.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/OperationsExpert.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Researcher.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/OperationsExpert.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Scientist.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Player.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Scientist.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Player.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Virologist.cpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Researcher.cpp">
 			<Option target="SP_4b"/>
 		</Unit>
-		<Unit filename="/home/user/Desktop/SP/SP_4b/Virologist.hpp">
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Researcher.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Scientist.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Scientist.hpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Virologist.cpp">
+			<Option target="SP_4b"/>
+		</Unit>
+		<Unit filename="/home/user/Desktop/SP/SP_4b/sources/Virologist.hpp">
 			<Option target="SP_4b"/>
 		</Unit>
 		<Unit filename="/home/user/Desktop/SP/SP_4b/CMakeLists.txt">
