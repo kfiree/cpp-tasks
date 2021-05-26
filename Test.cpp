@@ -7,13 +7,13 @@ using namespace ariel;
 using namespace std;
 
 TEST_CASE("good input") {
-    CHECK_THROWS(snowman(12312323));
-    CHECK_THROWS(snowman(11111111));
-    CHECK_THROWS(snowman(22222222));
-    CHECK_THROWS(snowman(33333333));
-    CHECK_THROWS(snowman(10101010));
-    CHECK_THROWS(snowman(01010101));
-    CHECK_THROWS(snowman(33333333));
+    CHECK_NOTHROW(snowman(12312323));
+    CHECK_NOTHROW(snowman(11111111));
+    CHECK_NOTHROW(snowman(22222222));
+    CHECK_NOTHROW(snowman(33333333));
+    CHECK_NOTHROW(snowman(10101010));
+    CHECK_NOTHROW(snowman(01010101));
+    CHECK_NOTHROW(snowman(33333333));
 }
 
 
