@@ -49,24 +49,19 @@ namespace ariel
             explicit Node(T val): _val(val), _depth(0){}
         };
 
-        // traversal types
-        enum Traversal {InOrder, PreOrder, PostOrder};
-
-        //size of tree
-        unsigned int _treeSize= 0;
-        int _maxDepth= 0;
-        // tree's root
-        shared_ptr<Node> _root;
+        enum Traversal {InOrder, PreOrder, PostOrder}; // traversal types
+        unsigned int _treeSize= 0; //size of tree
+        int _maxDepth= 0; //tree max depth
+        shared_ptr<Node> _root; // tree's root
 
     public:
 
         class Iterator {
-            // traversal types
-            Traversal _traversal = Traversal::InOrder;
-
+            Traversal _traversal = Traversal::InOrder; // traversal types
             shared_ptr<Node> _current;
-//TODO make private?
-        protected:
+
+        private:
+            //      +++ ITERATOR AID +++
 
             /**
              * aid for traversal
@@ -108,92 +103,6 @@ namespace ariel
             bool hasRight(){
                 return _current->_rightChild != nullptr;
             }
-
-        public:
-            /**
-             *
-             * @param curr start position of iterator
-             * @param type traversalType
-             */
-            explicit Iterator(shared_ptr<Node> curr = nullptr, Traversal type = Traversal::InOrder)
-                    : _current(curr), _traversal(type) {}
-
-            /**
-             * overloading operator *
-             * @return value of Iterator current position
-             */
-            T &operator*(){
-                return _current->_val;
-            }
-
-            /**
-             * overloading operator *
-             * @return value of Iterator current position
-             */
-            const T &operator*() const{
-                return _current->_val;
-            }
-            //TODO check why 2 needed
-
-            /**
-             * overloading operator ->
-             * @return value of Iterator current position by reference
-             */
-            T *operator->() const {
-                return &_current->_val;
-            }
-
-            // prefix ++i;
-            /**
-             * overloading operator prefix ++ (++i)
-             * @return incremented value of iterator
-             */
-            Iterator& operator++() {
-                next();
-                return *this;
-            }
-
-            /**
-             * overloading operator postfix ++ (i++).
-             *
-             * @return original value of iterator before increment.
-             */
-            Iterator operator++(int) {
-                Iterator temp = *this;
-                ++*this;
-                return temp;
-            }
-
-            /**
-             * overloading operator ==.
-             * compare 2 iterator by their values.
-             *
-             * @param other iterator to compare this to
-             * @return true if iterators values equal
-             */
-            bool operator==(const Iterator& other) const {
-                return _current == other._current;
-            }
-
-            /**
-             * overloading operator !=.
-             * compare 2 iterator by their values
-             *
-             * @param other iterator to compare this to
-             * @return true if iterators values equal
-             */
-            bool operator!=(const Iterator& other) const {
-                return !(*this==other);
-            }
-
-            /**
-             * @return node hold by iterator.
-             */
-            shared_ptr<Node> getCurr(){
-                return _current;
-            }
-
-            //TODO make all below private/protected
 
             /**
              * aid for traversal.
@@ -244,7 +153,6 @@ namespace ariel
                 _current = _current->_parent.lock();
             }
 
-            //TODO make specific nextprivate?
             /**
              * move current to next position - Inorder traversal.
              * @return iterator++
@@ -330,9 +238,102 @@ namespace ariel
                 return *this;
             }
 
+        public:
+            //       +++ CONSTRUCTOR +++
+
+            /**
+             *
+             * @param curr start position of iterator
+             * @param type traversalType
+             */
+            explicit Iterator(shared_ptr<Node> curr = nullptr, Traversal type = Traversal::InOrder): _current(curr), _traversal(type) {
+                if(_current) {
+                    switch (type) {
+                        case Traversal::InOrder:
+                            goDownLeft();
+                            break;
+                        case Traversal::PostOrder:
+                            goDownLeftAndRight();
+                            break;
+                        case Traversal::PreOrder:
+                            break;
+                    }
+                }
+            }
+
+            //       +++ GETTER +++
+
+            /**
+             * @return node hold by iterator.
+             */
+            shared_ptr<Node> &getCurr(){
+                return _current;
+            }
+
+            //   +++ OPERATOR OVERLOADING +++
+
+            /**
+             * overloading operator *
+             * @return value of Iterator current position
+             */
+            T &operator*(){
+                return _current->_val;
+            }
+
+            /**
+             * overloading operator ->
+             * @return value of Iterator current position by reference
+             */
+            T *operator->() const {
+                return &_current->_val;
+            }
+
+            /**
+             * overloading operator prefix ++ (++i)
+             * @return incremented value of iterator
+             */
+            Iterator& operator++() {
+                next();
+                return *this;
+            }
+
+            /**
+             * overloading operator postfix ++ (i++).
+             *
+             * @return original value of iterator before increment.
+             */
+            Iterator operator++(int) {
+                Iterator temp = *this;
+                ++*this;
+                return temp;
+            }
+
+            /**
+             * overloading operator ==.
+             * compare 2 iterator by their values.
+             *
+             * @param other iterator to compare this to
+             * @return true if iterators values equal
+             */
+            bool operator==(const Iterator& other) const {
+                return _current == other._current;
+            }
+
+            /**
+             * overloading operator !=.
+             * compare 2 iterator by their values
+             *
+             * @param other iterator to compare this to
+             * @return true if iterators values equal
+             */
+            bool operator!=(const Iterator& other) const {
+                return !(*this==other);
+            }
+
         };
 
-        // +++ BT CONSTRUCTORS +++
+        //      +++ BT CONSTRUCTORS +++
+
         /**
          * empty constructor.
          */
@@ -380,34 +381,7 @@ namespace ariel
             }
         }
 
-        /**
-         * operator overloading =.
-         * @param other BT
-         * @return updated BT
-         */
-        BinaryTree<T> &operator=( const BinaryTree<T> &other)
-        {
-            if(&other == this){return *this;}
-
-            add_root(other._root->_val);
-
-            copySubTreeOf(other._root);
-
-            return *this;
-        }
-
-        /**
-         * operator overloading =. (move)
-         *
-         * @param other BT
-         * @return updated BT
-         */
-        BinaryTree &operator=(BinaryTree<T> &&other) noexcept
-        {
-            *this = move(other);
-
-            return *this;
-        }
+        //      +++ GETTERS +++
 
         /**
          * getter of tree-size.
@@ -415,6 +389,26 @@ namespace ariel
          * @return size of tree
          */
         unsigned int size(){return this->_treeSize;}
+
+        /**
+         * return node struct with value.
+         *
+         * @param val value of node
+         * @return node struct
+         */
+        shared_ptr<Node> getNode(T val)
+        {
+
+            for (auto itr = begin(); itr != end(); itr++){
+                if (*itr == val){
+                    return itr.getCurr();
+                }
+            }
+
+            return nullptr;
+        }
+
+        //      +++ UPDATE TREE +++
 
         /**
          * update node depth and max depth of tree
@@ -504,6 +498,8 @@ namespace ariel
             return *this;
         }
 
+        //      +++ INIT ITERATORS +++
+
         /**
          * @return iterator pointing on the begin position of preorder traversal.
          */
@@ -524,9 +520,6 @@ namespace ariel
          */
         Iterator begin_inorder() const {
             auto itr = Iterator{_root, Traversal::InOrder};
-            if(_root) {
-                itr.goDownLeft();
-            }
             return itr;
         }
 
@@ -542,9 +535,6 @@ namespace ariel
          */
         Iterator begin_postorder() const {
             auto itr = Iterator{_root, Traversal::PostOrder};
-            if(_root) {
-                itr.goDownLeftAndRight();
-            }
             return itr;
         }
 
@@ -560,9 +550,6 @@ namespace ariel
          */
         Iterator begin() const {
             auto itr = Iterator{_root, Traversal::InOrder};
-            if(_root) {
-                itr.goDownLeft();
-            }
             return itr;
         }
 
@@ -573,36 +560,35 @@ namespace ariel
             return Iterator();
         }
 
-        static std::ostream & printSubtree(std::ostream & out,shared_ptr<Node> root, const std::string& prefix)
+        // +++ OPERATORS OVERLOADING +++
+
+        /**
+         * operator overloading =.
+         * @param other BT
+         * @return updated BT
+         */
+        BinaryTree<T> &operator=( const BinaryTree<T> &other)
         {
-            if (root == NULL){return out;}
+            if(&other == this){return *this;}
 
-            bool hasLeft = (root->_leftChild != NULL);
-            bool hasRight = (root->_rightChild != NULL);
+            add_root(other._root->_val);
 
-            if (!hasLeft && !hasRight)
-            {
-                return out;
-            }
+            copySubTreeOf(other._root);
 
-            out << prefix;
-            out << ((hasLeft  && hasRight) ? "├── " : "");
-            out << ((!hasLeft && hasRight) ? "└── " : "");
+            return *this;
+        }
 
-            if (hasRight)
-            {
-                bool printStrand = (hasLeft && hasRight && (root->_rightChild->_rightChild != NULL || root->_rightChild->_leftChild != NULL));
-                std::string newPrefix = prefix + (printStrand ? "│   " : "    ");
-                out << root->_rightChild->_val << std::endl;
-                printSubtree(out,root->_rightChild, newPrefix);
-            }
+        /**
+         * operator overloading =. (move)
+         *
+         * @param other BT
+         * @return updated BT
+         */
+        BinaryTree &operator=(BinaryTree<T> &&other) noexcept
+        {
+            *this = move(other);
 
-            if (hasLeft)
-            {
-                out << (hasRight ? prefix : "") << "└── " << root->_leftChild->_val << std::endl;
-                printSubtree(out,root->_leftChild, prefix + "    ");
-            }
-            return out;
+            return *this;
         }
 
         static void getNodesByVector(shared_ptr<Node> node, vector<vector<shared_ptr<Node>>> &depths, int depth, int location, int maxDepth){
@@ -644,18 +630,5 @@ namespace ariel
             }
             return out;
         }
-
-        shared_ptr<Node> getNode(T val)
-        {
-
-            for (auto itr = begin(); itr != end(); itr++){
-                if (*itr == val){
-                    return itr.getCurr();
-                }
-            }
-
-            return nullptr;
-        }
-
     };
 }
