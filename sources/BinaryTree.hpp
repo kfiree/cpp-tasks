@@ -591,44 +591,50 @@ namespace ariel
             return *this;
         }
 
-        static void getNodesByVector(shared_ptr<Node> node, vector<vector<shared_ptr<Node>>> &depths, int depth, int location, int maxDepth){
-            depths[depth][location] = node;
+        /**
+         * aid function of << operator overload.
+         * build ostream representation of tree.
+         *
+         * @param prefix string of branches
+         * @param node
+         * @param isLeft left child flag
+         * @param treeStream ostream object
+         * @return
+         */
+        static ostream& buildTreeStream(const std::string& prefix, shared_ptr<Node> node, bool isLeft,  ostream& treeStream)
+        {
+            if( node != nullptr )
+            {
+                treeStream << prefix;
 
-            int childDiff = (int)pow(2,maxDepth - depth)/2;
-            if(!node || childDiff == 0){ return;}
-            getNodesByVector(node->_leftChild, depths, depth+1,location-childDiff, maxDepth);
-            getNodesByVector(node->_rightChild, depths, depth+1, location +childDiff, maxDepth);
+                string yellowLeft = "\x1B[93m├──\033[0m";
+                string blueRight = "\x1B[34m└──\033[0m";
+                treeStream << (isLeft ? yellowLeft : blueRight  );
+
+                treeStream << "\033[3;43;30m(" <<  node->_val <<  ")\033[0m"<<endl;
+
+                string yellowBranch = "\x1B[93m│   \033[0m";
+                string blueBranch = "\x1B[34m│   \033[0m";
+                buildTreeStream( prefix + (isLeft ? yellowBranch : "    "), node->_leftChild, true, treeStream);
+                buildTreeStream( prefix + (isLeft ? blueBranch: "    "), node->_rightChild, false, treeStream);
+            }
+            return treeStream;
         }
-
+        static ostream& buildTreeStream(shared_ptr<Node> node, ostream& treeStream)
+        {
+            return buildTreeStream("", node, false, treeStream)<<endl;
+        }
+        
+        /**
+         * operator overloading of <<.
+         * 
+         * @param out ostream object 
+         * @param BT binary tree
+         * @return ostream of tree
+         */
         friend ostream &operator<<(ostream &out, const BinaryTree<T> &BT){
-            int maxDepth = BT._maxDepth;
-            vector <vector <shared_ptr<Node>>> depths;
-
-            for(int i = 0; i<maxDepth+1; i++){
-                vector<shared_ptr<Node>> lvl;
-                for(int j = 0; j<pow(2, maxDepth+1)-1; j++){
-                    shared_ptr<Node> node;
-                    lvl.push_back(node);
-                }
-                depths.push_back(lvl);
-            }
-
-            getNodesByVector(BT._root, depths, 0,(int)pow(2, maxDepth+1)/2 -1, maxDepth);
-
-            for(const auto& lvl: depths){
-                for(const auto& element: lvl){
-                    if(!element){
-                        out<< " \x1B[93m#\033[0m \x1B[34m#\033[0m";
-                    }else{
-                        std::ostringstream  ss;
-                        ss << (*element)._val;
-                        string elementStr ="\033[3;43;30m(" +  ss.str() + ")\033[0m";
-                        out<<" " << elementStr;
-                    }
-                }
-                out<<endl;
-            }
-            return out;
+            out<<endl;
+            return buildTreeStream(BT._root, out);
         }
     };
 }
