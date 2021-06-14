@@ -624,17 +624,33 @@ namespace ariel
         {
             return buildTreeStream("", node, false, treeStream)<<endl;
         }
-        
+
         /**
          * operator overloading of <<.
-         * 
-         * @param out ostream object 
+         *
+         * @param out ostream object
          * @param BT binary tree
          * @return ostream of tree
          */
         friend ostream &operator<<(ostream &out, const BinaryTree<T> &BT){
             out<<endl;
-            return buildTreeStream(BT._root, out);
+
+            buildTreeStream(BT._root, out);
+
+            out <<"                  ----BINARY TREE----"<<endl<<endl<<"* Preorder  -> ";
+
+            for (auto it=BT.begin_preorder(); it!=BT.end_preorder(); ++it) {
+                out << (*it) << " " ;
+            }
+            out <<endl<<"* Inorder   -> ";
+            for (auto it=BT.begin_inorder(); it!=BT.end_inorder(); ++it) {
+                out << (*it) << " " ;
+            }
+            out <<endl<<"* Postorder -> ";
+            for (auto it=BT.begin_postorder(); it!=BT.end_postorder(); ++it) {
+                out << (*it) << " " ;
+            }
+            return out;
         }
     };
 }
