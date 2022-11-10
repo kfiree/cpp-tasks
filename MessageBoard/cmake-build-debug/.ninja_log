@@ -1,0 +1,11 @@
+# ninja log v5
+0	593	6897292072614902	CMakeFiles/MessageBoard.dir/main.cpp.obj	66f0e9a43e053948
+7	596	6897292072654907	CMakeFiles/MessageBoard.dir/StudentTest1.cpp.obj	96c054faddcc2b13
+12	643	6897292073124475	CMakeFiles/MessageBoard.dir/Board.cpp.obj	73904b5bfbb7ff01
+17	711	6897292073805162	CMakeFiles/MessageBoard.dir/StudentTest2.cpp.obj	3cb0daa0624f476c
+2	115	6897304046704574	MessageBoard.exe	780b860e017b75ae
+3	799	6897858302408173	CMakeFiles/MessageBoard.dir/main.cpp.obj	66f0e9a43e053948
+8	862	6897858303019504	CMakeFiles/MessageBoard.dir/Board.cpp.obj	73904b5bfbb7ff01
+862	1098	6897858305337912	MessageBoard.exe	780b860e017b75ae
+7	3061	6897912617354372	CMakeFiles/MessageBoard.dir/main.cpp.obj	66f0e9a43e053948
+3064	3663	6897912623303097	MessageBoard.exe	780b860e017b75ae

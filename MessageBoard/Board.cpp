@@ -29,8 +29,6 @@ namespace ariel
         this->minC=getMaxUInt();
         this->maxR=0;
         this->maxC=0;
-
-        // posts map
         this->postMap = std::map<u_int, std::map<u_int, char>>(); 
     }
 
@@ -41,25 +39,21 @@ namespace ariel
     
     
     void Board::post(u_int row, u_int col, Direction dir, string txt){
-        // set min board bounds
+        /** update min board bounds */
         minR = min(minR, row);
         minC = min(minC, col);
 
-        // add post
+        /** add post */
         for(char& c : txt) {
             postMap[row][col] = c;
-            dir == h ? col++ : row++; 
+            dir == h ? col++ : row++;
         }
 
-        // set max board bounds
+        /** update max board bounds */
         maxR = max(maxR,row);
         maxC = max(maxC, col);
 
-
-
-
-
-        txt+=' ';
+//        txt+=' ';
     }
 
     string Board::read(u_int row, u_int col, Direction dir, u_int len){

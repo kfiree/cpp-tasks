@@ -1,0 +1,3 @@
+C:/Users/kfire/Development/cpp-tasks/MessageBoard/cmake-build-debug/CMakeFiles/MessageBoard.dir
+C:/Users/kfire/Development/cpp-tasks/MessageBoard/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/kfire/Development/cpp-tasks/MessageBoard/cmake-build-debug/CMakeFiles/rebuild_cache.dir
